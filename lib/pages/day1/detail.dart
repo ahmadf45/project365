@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'day1.dart';
 
 class Detail extends StatelessWidget {
   final String id;
