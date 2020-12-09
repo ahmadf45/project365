@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter/services.dart';
+import 'detail.dart';
 
 class Day1 extends StatefulWidget {
   @override
@@ -26,9 +27,9 @@ class _Day1State extends State<Day1> {
     items.add(new Gambar("image002", "Alejandro Escamilla", 560, 370,
         "https://picsum.photos/seed/image002/500/800"));
     items.add(new Gambar("image003", "Alejandro Escamilla", 560, 370,
-        "https://picsum.photos/seed/image003/500/300"));
+        "https://picsum.photos/seed/image003/500/400"));
     items.add(new Gambar("image404", "Alejandro Escamilla", 560, 370,
-        "https://picsum.photos/seed/image404/500/900"));
+        "https://picsum.photos/seed/image404/500/800"));
     items.add(new Gambar("image005", "Alejandro Escamilla", 560, 370,
         "https://picsum.photos/seed/image005/500/600"));
     items.add(new Gambar("image006", "Alejandro Escamilla", 560, 370,
@@ -40,15 +41,15 @@ class _Day1State extends State<Day1> {
     items.add(new Gambar("image009", "Alejandro Escamilla", 560, 370,
         "https://picsum.photos/seed/image009/500/600"));
     items.add(new Gambar("image010", "Alejandro Escamilla", 560, 370,
-        "https://picsum.photos/seed/image010/500/900"));
+        "https://picsum.photos/seed/image010/500/800"));
     items.add(new Gambar("image011", "Alejandro Escamilla", 560, 370,
         "https://picsum.photos/seed/image011/500/500"));
     items.add(new Gambar("image012", "Alejandro Escamilla", 560, 370,
         "https://picsum.photos/seed/image012/500/800"));
     items.add(new Gambar("image013", "Alejandro Escamilla", 560, 370,
-        "https://picsum.photos/seed/image013/500/300"));
+        "https://picsum.photos/seed/image013/500/400"));
     items.add(new Gambar("image014", "Alejandro Escamilla", 560, 370,
-        "https://picsum.photos/seed/image014/500/900"));
+        "https://picsum.photos/seed/image014/500/800"));
     items.add(new Gambar("image015", "Alejandro Escamilla", 560, 370,
         "https://picsum.photos/seed/image015/500/600"));
     items.add(new Gambar("image016", "Alejandro Escamilla", 560, 370,
@@ -72,9 +73,27 @@ class _Day1State extends State<Day1> {
   }
 
   Widget Iii(BuildContext context, int index) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(16.0),
-      child: Image.network(items[index].url, fit: BoxFit.cover),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => Detail(
+                    id: items[index].id,
+                    author: items[index].author,
+                    height: items[index].height,
+                    width: items[index].width,
+                    url: items[index].url,
+                  )),
+        );
+      },
+      child: Hero(
+        tag: items[index].url,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(16.0),
+          child: Image.network(items[index].url, fit: BoxFit.cover),
+        ),
+      ),
     );
   }
 
@@ -88,7 +107,7 @@ class _Day1State extends State<Day1> {
             margin: EdgeInsets.only(left: 5, right: 5),
             color: Colors.transparent,
             child: StaggeredGridView.countBuilder(
-              crossAxisCount: 2,
+              crossAxisCount: 3,
               itemCount: items.length,
               itemBuilder: (context, index) => Iii(context, index),
               //pinterest
