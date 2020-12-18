@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'day1/day1.dart';
+import 'day1_customGridview/day1.dart';
+import 'day2_movieApp/day2.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -89,7 +90,7 @@ class _DashboardState extends State<Dashboard> {
                   height: 50,
                 ),
                 day('Day 1 - Custom Grid View', Day1()),
-                day('Day 2 - StaggedView', Day1()),
+                day('Day 2 - Movie App', Day2()),
                 day('Day 3 - StaggedView', Day1()),
                 day('Day 4 - StaggedView', Day1()),
                 day('Day 5 - StaggedView', Day1()),
