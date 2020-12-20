@@ -3,9 +3,9 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter/services.dart';
 import 'detail.dart';
 
-class Day1 extends StatefulWidget {
+class Day1Home extends StatefulWidget {
   @override
-  _Day1State createState() => _Day1State();
+  _Day1HomeState createState() => _Day1HomeState();
 }
 
 class Gambar {
@@ -18,10 +18,10 @@ class Gambar {
   Gambar(this.id, this.author, this.width, this.height, this.url);
 }
 
-class _Day1State extends State<Day1> {
+class _Day1HomeState extends State<Day1Home> {
   List<Gambar> items = new List<Gambar>();
 
-  _Day1State() {
+  _Day1HomeState() {
     items.add(new Gambar("image001", "Alejandro Escamilla", 560, 370,
         "https://picsum.photos/seed/image001/500/500"));
     items.add(new Gambar("image002", "Alejandro Escamilla", 560, 370,

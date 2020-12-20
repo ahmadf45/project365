@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'day2Home.dart';
 
-class Day2 extends StatefulWidget {
+class Day2SplashScreen extends StatefulWidget {
   @override
-  _Day2State createState() => _Day2State();
+  _Day2SplashScreenState createState() => _Day2SplashScreenState();
 }
 
-class _Day2State extends State<Day2> {
+class _Day2SplashScreenState extends State<Day2SplashScreen> {
   @override
   void initState() {
     super.initState();
@@ -28,9 +28,6 @@ class _Day2State extends State<Day2> {
               color: Colors.transparent,
               image: DecorationImage(
                   image: AssetImage('lib/images/play.png'), fit: BoxFit.cover)),
-          child: Center(
-            child: Text('UCING'),
-          ),
         ),
       ),
     );

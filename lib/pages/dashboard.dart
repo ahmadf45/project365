@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'day1_customGridview/day1.dart';
-import 'day2_movieApp/day2.dart';
+import 'day1_customGridview/day1Home.dart';
+import 'day2_movieApp/day2SplashScreen.dart';
+import 'day2_movieApp/day2Detail.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -89,16 +90,16 @@ class _DashboardState extends State<Dashboard> {
                 SizedBox(
                   height: 50,
                 ),
-                day('Day 1 - Custom Grid View', Day1()),
-                day('Day 2 - Movie App', Day2()),
-                day('Day 3 - StaggedView', Day1()),
-                day('Day 4 - StaggedView', Day1()),
-                day('Day 5 - StaggedView', Day1()),
-                day('Day 6 - StaggedView', Day1()),
-                day('Day 7 - StaggedView', Day1()),
-                day('Day 8 - StaggedView', Day1()),
-                day('Day 9 - StaggedView', Day1()),
-                day('Day 10 - StaggedView', Day1()),
+                day('Day 1 - Custom Grid View', Day1Home()),
+                day('Day 2 - Movie App', Day2SplashScreen()),
+                day('Day 3 - StaggedView', Day1Home()),
+                day('Day 4 - StaggedView', Day1Home()),
+                day('Day 5 - StaggedView', Day1Home()),
+                day('Day 6 - StaggedView', Day1Home()),
+                day('Day 7 - StaggedView', Day1Home()),
+                day('Day 8 - StaggedView', Day1Home()),
+                day('Day 9 - StaggedView', Day1Home()),
+                day('Day 10 - StaggedView', Day1Home()),
               ],
             ),
           ),
